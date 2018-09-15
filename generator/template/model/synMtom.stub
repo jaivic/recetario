@@ -1,0 +1,22 @@
+public function sync$UCASEMODELDETAILNAME$($itemsToSync)
+{
+    $itemsToSync = collect($itemsToSync);
+    $modelLists = $METHODNAME$::all();
+    $arrayExist = $modelLists->pluck("name")->toArray();
+    $itemsToSync->each(function ($item) use ($arrayExist) {
+        if (!in_array($item, $arrayExist)) {
+            $this->$METHODNAME$()->create(['name' => $item]);
+        }
+    });
+
+    $itemReady = $this->$METHODNAME$()->pluck("name")->toArray();
+    $modelLists->each(function ($model) use ($itemsToSync, $itemReady) {
+        if (in_array($model->name, $itemsToSync->toArray())) {
+            if (!in_array($model->name, $itemReady)) {
+                $this->$METHODNAME$()->save($model);
+            }
+        } else {
+            $this->$METHODNAME$()->detach($model);
+        }
+    });
+}

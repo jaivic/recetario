@@ -1,0 +1,5 @@
+<tr>
+<td><b>$FIELD_NAME_TITLE$</b></td>
+<td>{!!  $row->$FIELD_NAME$ !!}</td>
+</tr>
+    

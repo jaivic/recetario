@@ -1,0 +1,7 @@
+@extends('layouts.partForm')
+@section('formulario')
+              {!! Form::model($$MODEL_NAME_CAMEL$, ['route' => ['$ROUTE$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$], 'method' => 'post','class' => 'smart-form  client-form']) !!}
+                @include('$VIEW_FOLDER$.$VIEW_PREFIX$.editfields')
+            {!! Form::close() !!}
+
+@endsection

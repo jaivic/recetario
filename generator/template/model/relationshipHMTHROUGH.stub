@@ -1,0 +1,18 @@
+/**
+* @return \Illuminate\Database\Eloquent\Relations\$RELATIONSHIP_CLASS$
+**/
+public function $FUNCTION_NAME$()
+{
+return $this->$RELATION$("$NAMESPACE_MODEL$\\$RELATION_MODEL_NAME$","$NAMESPACE_MODEL$\\$TABLEINTERMEDIA$"
+,"$LKEY$","$FKEY$","id","id");
+/*
+ $this->hasManyThrough(
+            'App\Post',
+            'App\User',
+            'country_id', // Foreign key on users table...
+            'user_id', // Foreign key on posts table...
+            'id', // Local key on countries table...
+            'id' // Local key on users table...
+        );
+*/
+}

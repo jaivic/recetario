@@ -1,0 +1,5 @@
+
+$result["$MODEL$"]=[];
+if($row->$MODELFUNCTION$()){
+  $result["$MODEL$"]= $row->$MODELFUNCTION$()->get();
+}

@@ -1,0 +1,6 @@
+<section>
+    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:',['class' => 'label']) !!}
+    <label class="input">
+         {!! Form::text('$FIELD_NAME$', null, ['class' => 'input-xs']) !!}
+    </label>
+</section>

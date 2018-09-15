@@ -1,0 +1,4 @@
+public function sync$UCASEMODELDETAILNAME$($itemsToSync)
+    {      
+            $this->$METHODNAME$()->update($itemsToSync);
+    }

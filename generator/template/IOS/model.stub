@@ -1,0 +1,4 @@
+struct $MODEL$: Codable {
+$VAR$
+$STRUCT$
+}

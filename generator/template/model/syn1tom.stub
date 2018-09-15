@@ -1,0 +1,17 @@
+public function sync$UCASEMODELDETAILNAME$($itemsToSync)
+    {
+
+        $this->$METHODNAME$()->each(function ($item) use ($itemsToSync) {
+            if (! in_array($item->name, $itemsToSync)) {
+                $item->delete();
+            }
+        });
+
+        $newItems = collect($itemsToSync)->filter(function ($item) {
+            return ! in_array($item, $this->$METHODNAME$->pluck('name')->toArray());
+        });
+
+        $newItems->each(function ($item) {
+            $this->$METHODNAME$()->create(['name' => $item]);
+        });
+    }

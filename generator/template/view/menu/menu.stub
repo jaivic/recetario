@@ -1,0 +1,7 @@
+
+<li class="">
+    <a href="{{url("$URL$")}}">
+        <span class="menu-item-parent">$URLNAME$</span>
+    </a>
+</li>
+

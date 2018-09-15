@@ -1,0 +1,2 @@
+
+                  pantalla de invitado

@@ -1,0 +1,115 @@
+
+config:{
+	model:{
+	enable:true,
+	dir:''
+	},
+	request:{
+	enable:true,
+	template:'php-laravel-api',
+	dir:''
+	},
+	api:{
+	enable:true,
+	request:true,
+	template:'php-laravel-api',
+	dir:''
+	},
+	controller:{
+	enable:true,
+	request:true,
+	template:'php-laravel',
+	dir:''
+	},
+	view:{
+	enable:true,
+	template:'php-laravel',
+	style:'php-smartadmin',
+	dir:'',
+	},
+userRoles:[]
+},
+
+model:{
+	tabla1:{
+		enable:true,
+		nombre:'',
+		nombreParaHumano:'',
+		softdelete:true,
+		fieldDelete:"",
+		campo:[
+			{ nombre:'',
+			  nombreHumano:'',
+			  rule:[],
+			  viewFill:"inputtext"/*select,input,imagen*/,
+			  viewshow:"imagen"/*text,imagen*/		
+			},
+			{ nombre:'',
+			  nombreHumano:'',
+			  rule:[],
+			  viewFill:{name:'select',input:'bd:tabla:id.campo'},
+			  viewshow:"text"	
+			},
+			{ nombre:'',
+			  nombreHumano:'',
+			  rule:[],
+			  viewFill:{name:'select',input:'this:[1,2,3,4]'},
+			  viewshow:"text"	
+			},
+		],
+		campoCrear.Update[],
+		campoShow.List:[],
+		indice:[],
+		dates:[]
+	},
+},
+
+service{
+	tabla1:{
+		enable:true,
+		
+		index:{
+			enable:true,
+			filtros:[]
+			mensaje:{
+				error:'',
+				vacio:''
+			}
+		},
+		create:{
+			enable:true,
+			mensaje:{
+				error:'',
+				exito:''
+			}
+		},
+		show:{
+			enable:true,
+			mensaje:{
+				error:'',
+				exito:''
+			}
+		},
+		update:{
+			enable:true,
+			mensaje:{
+				error:'',
+				exito:''
+			}
+		},
+		delete:{
+			enable:true,
+			mensaje:{
+				error:'',
+				exito:''
+			}
+		},
+		
+	},
+
+},
+
+view:{
+
+}
+

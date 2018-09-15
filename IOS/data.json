@@ -1,0 +1,64 @@
+{
+    "success": true,
+    "data": {
+        "id": 1,
+        "title": "titulo",
+        "slug": "slug",
+        "body": "body",
+        "type": 1,
+        "image": "imagen",
+        "postback": "postback",
+        "visits": 1,
+        "likes": 1,
+        "status": 1,
+        "user_id": 1,
+        "created_at": null,
+        "updated_at": null,
+        "categories": [
+            {
+                "id": 1,
+                "name": "categoria",
+                "created_at": null,
+                "updated_at": null,
+                "pivot": {
+                    "post_id": 1,
+                    "category_id": 1
+                }
+            }
+        ],
+        "tags": [
+            {
+                "id": 1,
+                "name": "tag1",
+                "created_at": null,
+                "updated_at": null,
+                "pivot": {
+                    "post_id": 1,
+                    "tag_id": 1
+                }
+            },
+            {
+                "id": 2,
+                "name": "tag2",
+                "created_at": null,
+                "updated_at": null,
+                "pivot": {
+                    "post_id": 1,
+                    "tag_id": 2
+                }
+            }
+        ],
+        "users": [
+            {
+                "id": 1,
+                "name": "usuario",
+                "email": "corre@gmail.com",
+                "password": "md5",
+                "remember_token": null,
+                "created_at": null,
+                "updated_at": null
+            }
+        ]
+    },
+    "message": "success"
+}

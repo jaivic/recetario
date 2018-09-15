@@ -1,0 +1,53 @@
+<?php
+
+namespace $NAMESPACE_CONTROLLER$;
+
+use $NAMESPACE_MODEL$;
+use Illuminate\Http\Request;
+$USECREATEREQUEST$
+$USEUPDATEREQUEST$
+use $NAMESPACE_SERVICE$\$MODAL_NAME$Service;
+use App\Sg\SgController;
+
+class $MODAL_NAME$Controller extends SgController
+{
+    public $service;
+  
+    public function __construct()
+    {
+      $this->service=new $MODAL_NAME$Service(); 
+    }
+    public function index()
+    {
+      $$MODAL_NAME$ = $MODAL_NAME$::all();
+      return view('$ADD_FOLDER$.$MODAL_NAME$.index',compact("$MODAL_NAME$"));
+    }
+    public function create(){
+      return view('$ADD_FOLDER$.$MODAL_NAME$.create');
+    }
+    public function edit($id){
+      $$MODAL_NAME$ = $MODAL_NAME$::find($id);
+      return view('$ADD_FOLDER$.$MODAL_NAME$.edit',compact("$MODAL_NAME$"));
+    }
+     public function show($id){
+        $row = $MODAL_NAME$::find($id);
+        return view('$ADD_FOLDER$.$MODAL_NAME$.show',compact("row"));
+    }
+    public function store($CREATEREQUEST$ $request)
+    { 
+        $$MODAL_NAME$ = $this->service->create($request->all());
+        return redirect("$ROUTE$/edit/$$MODAL_NAME$->id")
+        ->with('status', 'Cambios agregada correctamente');
+    }
+    public function update($UPDATEREQUEST$ $request,$id)
+    {
+        $$MODAL_NAME$ = $this->service->update($request->all(),$id);
+        return redirect("$ROUTE$/edit/$$MODAL_NAME$->id")
+        ->with('status', 'Cambios agregada correctamente');
+    }
+      public function delete($id)
+    {        
+        $this->service->delete($id);
+        return redirect("$ROUTE$/index")->with('status', 'Cambios agregada correctamente');
+    }  
+}

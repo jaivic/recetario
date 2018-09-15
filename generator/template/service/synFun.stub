@@ -1,0 +1,2 @@
+$itemsToSync = $data['$MODALDETAILNAME$'];
+$this->sync$UCASEMODELDETAILNAME$($itemsToSync,$masterItem)

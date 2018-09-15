@@ -1,0 +1,23 @@
+<?php
+
+namespace $NAMESPACE_API_REQUEST$;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class Create$MODEL_NAME$Request extends  FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return true;
+    }
+
+    public function rules()
+    {
+        return [$APIRULES$];
+    }
+}

@@ -1,0 +1,19 @@
+<?php
+namespace $NAMESPACE_API_REQUEST$;
+
+
+use App\Sg\SgRequest;
+
+class Update$MODEL_NAME$APIRequest extends SgRequest
+{
+
+    public function authorize()
+    {
+        return true;
+    }
+
+    public function rules()
+    {
+           return [$APIRULES$];
+    }
+}

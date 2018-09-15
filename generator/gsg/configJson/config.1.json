@@ -1,0 +1,16 @@
+
+{
+	"model":[
+	{
+		"dir":"generator/template/model/model.stub",
+		"name":"php-laravel-basic"
+	},
+	{
+		"dir":"App\\Http\\Models\\",
+		"name":"php-laravel-basic"
+	},
+
+]
+	
+
+}

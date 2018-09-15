@@ -1,0 +1,54 @@
+<?php
+
+namespace $NAMESPACE_CONTROLLER_API$;
+
+use $NAMESPACE_MODEL$;
+use Illuminate\Http\Request;
+$USECREATEREQUEST$
+$USEUPDATEREQUEST$
+use $NAMESPACE_SERVICE$\$MODAL_NAME$Service;
+use App\Sg\AppBaseController;
+
+class $MODAL_NAME$Controller extends AppBaseController
+{
+    public $service;
+  
+    public function __construct()
+    {
+      $this->service=new $MODAL_NAME$Service(); 
+    }
+    public function store($CREATEREQUEST$ $request)
+    { 
+      $$MODAL_NAME$ = $this->service->create($request->all());
+      return $this->sendResponse($$MODAL_NAME$->toArray(), '$MODAL_NAME$ guardado exitosamente');
+    }
+    public function update($UPDATEREQUEST$ $request,$id)
+    {
+       $$MODAL_NAME$ = $this->service->update($request->all(),$id);
+       return $this->sendResponse($$MODAL_NAME$->toArray(), '$MODAL_NAME$ actualizado exitosamente');
+    }
+      public function delete($id)
+    {        
+      $this->service->delete($id);
+      return $this->sendResponse(null, '$MODAL_NAME$ eliminado correctamente');
+    }
+    public function show($id){
+        $row = $MODAL_NAME$::find($id);
+        $result= $row->toArray();
+        
+        //*$ADDMODELS$*/
+        
+        return $this->sendResponse($result, 'success');
+    }
+     public function all()
+    {
+        $row = $MODAL_NAME$::all();
+        $result = $row->toArray();
+        foreach ($row as $key => $value) {
+           //*$ADDMODELSARRAY$*/
+        }
+        
+        return $this->sendResponse($result, 'success');
+    }
+    
+}

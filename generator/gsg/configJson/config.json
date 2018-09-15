@@ -1,0 +1,44 @@
+
+{
+	"config":{
+		"model":{
+			"enable":true,
+			"dir":"App\\Http\\Models\\",
+			"namespace":"App\\Http\\Models",
+			"template":"php-laravel-basic"
+		},
+		"request":{
+			"enable":true,
+			"template":"php-laravel-api",
+			"dir":"App\\Http\\Requests\\",
+			"namespace":"App\\Http\\Requests"
+		},
+		"service":{
+			"enable":true,
+			"template":"php-laravel",
+			"dir":"App\\Http\\service\\",
+			"namespace":"App\\Http\\service"
+		},
+		"api":{
+			"enable":true,
+			"request":true,
+			"template":"php-laravel-api",
+			"dir":"App\\Http\\Controllers\\Api\\",
+			"namespace":"App\\Http\\Controllers\\Api"
+		},
+		"controller":{
+			"enable":true,
+			"request":true,
+			"template":"php-laravel",
+			"dir":"App\\Http\\Controllers\\",
+			"namespace":"App\\Http\\Controllers"
+		},
+		"view":{
+			"enable":true,
+			"template":"php-laravel",
+			"style":"php-smartadmin",
+			"dir":"resources\\views\\"
+		}
+	}
+}
+

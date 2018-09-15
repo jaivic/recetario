@@ -1,0 +1,7 @@
+
+
+ $result[$key]["$MODEL$"] = [];
+if($value->$MODELFUNCTION$()){
+  $result[$key]["$MODEL$"]= $value->$MODELFUNCTION$()->get();
+}
+ 
